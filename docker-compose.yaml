@@ -1,0 +1,43 @@
+services:
+  evidenta-postgres:
+    image: postgres:16-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./bin/db:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    env_file:
+      - ./config/local/db.env
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  evidenta-api:
+    build:
+      context: ./
+      target: evidenta_dev
+    volumes:
+      - ./:/app
+    ports:
+      - 8000:8000
+    env_file:
+      - ./config/local/db.env
+      - ./config/local/api.env
+    depends_on:
+      evidenta-postgres:
+        condition: service_started
+      init-app:
+        condition: service_completed_successfully
+
+  init-app:
+    build:
+      context: ./
+      target: evidenta_dev
+    env_file:
+      - ./config/local/db.env
+      - ./config/local/api.env
+    depends_on:
+      - evidenta-postgres
+    command: sh ./bin/app/init-app.sh
+
+volumes:
+  postgres_data:

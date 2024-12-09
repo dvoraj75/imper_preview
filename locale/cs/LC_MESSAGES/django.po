@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-24 10:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: app_settings/settings.py:161
+msgid "Czech"
+msgstr "Čeština"
+
+#: app_settings/settings.py:162
+msgid "English"
+msgstr "Angličtina"
+
+#: evidenta/core/company/enums.py:9
+msgid "Freelancer"
+msgstr "Fyzická osoba"
+
+#: evidenta/core/company/enums.py:10
+msgid "Legal entity"
+msgstr "Právnicá osoba"
+
+#: evidenta/core/company/enums.py:14
+msgid "Notifiable trade"
+msgstr "Ohlašovaná živnost"
+
+#: evidenta/core/company/enums.py:15
+msgid "Licensed trade"
+msgstr "Koncesovaná živnost"
+
+#: evidenta/core/company/enums.py:19
+msgid "Limited company"
+msgstr "Společnost s ručením omezeným"
+
+#: evidenta/core/company/enums.py:20
+msgid "Limited stock company"
+msgstr "Akciová společnost bez veřejné nabídky akcií"
+
+#: evidenta/core/company/enums.py:21
+msgid "Public stock company"
+msgstr "Akciová společnost s veřejnou nabídkou akcií"
+
+#: evidenta/core/company/enums.py:22
+msgid "General partnership"
+msgstr "Veřejná obchodní společnost"
+
+#: evidenta/core/company/enums.py:23
+msgid "Limited partnership"
+msgstr "Komanditní společnost"
+
+#: evidenta/core/company/enums.py:24
+msgid "Cooperative"
+msgstr "Družstvo"
+
+#: evidenta/core/company/enums.py:25
+msgid "Housing cooperative"
+msgstr "Bytové družstvo"
+
+#: evidenta/core/company/enums.py:26
+msgid "Societas europaea"
+msgstr "Evropská společnost"
+
+#: evidenta/core/user/admin.py:14 evidenta/core/user/admin.py:20
+msgid "General"
+msgstr "Obecné"
+
+#: evidenta/core/user/admin.py:15 evidenta/core/user/admin.py:21
+msgid "Personal Info"
+msgstr "Osobní údaje"
+
+#: evidenta/core/user/admin.py:16 evidenta/core/user/admin.py:22
+msgid "Contact info"
+msgstr "Kontaktní údaje"
+
+#: evidenta/core/user/enums.py:8
+msgid "Guest"
+msgstr "Host"
+
+#: evidenta/core/user/enums.py:9
+msgid "Client"
+msgstr "Klient"
+
+#: evidenta/core/user/enums.py:10
+msgid "Accountant"
+msgstr "Účetní"
+
+#: evidenta/core/user/enums.py:11
+msgid "Supervisor"
+msgstr "Vedoucí"
+
+#: evidenta/core/user/enums.py:12
+msgid "Admin"
+msgstr "Admin"
+
+#: evidenta/core/user/enums.py:16
+msgid "Male"
+msgstr "Muž"
+
+#: evidenta/core/user/enums.py:17
+msgid "Female"
+msgstr "Žena"
+
+#: evidenta/core/user/models/user.py:57
+#, python-brace-format
+msgid "Role {role_name} does not exist."
+msgstr "Role {role_name} neexsituje."
+
+#: evidenta/core/user/models/user.py:69
+msgid "Some of the company id does not exist."
+msgstr "Některá z id společností neexistují."
+
+#: evidenta/core/user/models/user.py:97
+msgid "Invalid e-mail address format."
+msgstr "Chybný formát e-mailové adresy."
+
+#: evidenta/core/user/models/user.py:112
+msgid "Invalid phone number format."
+msgstr "Chybný formát telefonního čísla."
+
+#~| msgid "Cooperative"
+#~ msgid "Housing association"
+#~ msgstr "Sdružení vlastníků jednotek"
+
+#~ msgid "Natural person"
+#~ msgstr "Fyzická osoba"

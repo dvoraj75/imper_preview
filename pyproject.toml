@@ -1,0 +1,57 @@
+[tool.black]
+line-length = 120
+target_version = ["py311"]
+
+[tool.isort]
+py_version = "311"
+src_paths = ["evidenta", "app_settings"]
+sections = ["FUTURE", "STDLIB", "DJANGO", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+known_django = "django"
+multi_line_output = 3
+lines_after_imports = 2
+line_length = 120
+include_trailing_comma = true
+use_parentheses = true
+
+[tool.ruff]
+line-length = 120  # same as black
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "DJ", "S", "B", "W", "T20"]
+ignore = [
+    "S101",  # varuje pred pouzitim assertu, protoze v optimalizovanem runu python je assert nepouzitelny
+    "F403",
+    "F405"  # tohle a 403 rve kvuli star importum, ktery pouzivam napriklad v test_settings
+]
+
+[tool.ruff.lint.pyflakes]
+extend-generics = [
+    "django.db.models.ForeignKey",
+    "django.db.models.ManyToManyField",
+    "django.db.models.OneToOneField",
+]
+
+[tool.coverage.run]
+omit = [
+    "tests/",
+    "conftest.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "def __repr__",
+    "def __str__"
+]
+
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "app_settings.test_settings"
+addopts="-ra -v --cov=evidenta --cov-report=xml -n auto"
+python_files="tests/*.py"
+env_files = [
+    "./config/local/api.env",
+    "./config/local/db.env",
+]
